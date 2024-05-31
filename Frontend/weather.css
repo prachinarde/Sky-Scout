@@ -1,0 +1,467 @@
+:root {
+    --back: repeating-linear-gradient(rgb(230, 229, 229), #000);
+}
+
+
+@keyframes btotop {
+    from {
+        top: 100vh;
+    }
+
+    to {
+        top: 15vh;
+    }
+}
+
+@keyframes shadow {
+    from {
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    to {
+        box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.5);
+    }
+}
+
+body {
+    position: absolute;
+    margin: 0;
+    background: url("bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    z-index: -1;
+    background-attachment: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+    font-family: 'Orbitron', sans-serif;
+}
+
+p {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 1000;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#transparent {
+    position: absolute;
+    width: 70vw;
+    height: 70vh;
+    top: 15%;
+    right: 15%;
+    background-color: white;
+    opacity: 0.3;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px #111;
+}
+
+input[type=text] {
+    font-family: 'Orbitron', sans-serif;
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 25%;
+    font-size: 2rem;
+    border-radius: 50px;
+    margin-right: 25%;
+    padding-left: 2%;
+    box-shadow: 2px 2px 2px #333;
+}
+
+
+.glass {
+    position: absolute;
+    border: 0;
+    background: transparent;
+    top: 15px;
+    left: calc(75% - 35px);
+    cursor: pointer;
+    filter: brightness(200%);
+}
+
+.glass:hover {
+    transform: translateY(-2px);
+}
+
+::placeholder {
+    font-family: 'Orbitron', sans-serif;
+    color: #000;
+    padding-left: 2%;
+}
+
+.result {
+    display: grid;
+    grid-template-columns: 1.5fr repeat(4, 1fr);
+    grid-auto-rows: 1.5fr 1.5fr 1fr;
+    position: absolute;
+    width: 70vw;
+    height: 85vh;
+    background: repeating-linear-gradient(rgb(240, 223, 226), rgb(198, 222, 231));
+    top: 100vh;
+    left: 15vw;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    animation: none;
+}
+
+.back {
+    position: absolute;
+    font-family: "Orbitron", sans-serif;
+    background: transparent;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: .3rem;
+    top: 85%;
+    border-radius: 15px;
+    left: 50%;
+    margin-left: -70px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.oops {
+    position: absolute;
+    left: calc(50% - 200px);
+    margin: 30px auto;
+    border: solid 1px black;
+    border-radius: 200px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 1157px) {
+    .result {
+        overflow-y: auto;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .result {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .oops {
+        width: 300px;
+        left: calc(50% - 150px);
+    }
+
+    .name {
+        margin-left: 20px;
+    }
+
+    .back {
+        font-size: 1rem;
+        top: 70%;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        left: 50%;
+        margin-left: -50px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .result .name {
+        margin: 10px auto;
+    }
+
+    input[type=text] {
+        font-size: 1rem;
+    }
+
+    .glass {
+        width: 20px;
+        left: calc(75% - 20px);
+        top: 13px;
+    }
+
+    .diduknow {
+        font-size: .8rem;
+    }
+
+}
+
+@media screen and (max-width: 447px) {
+    .spotify_text {
+        font-size: 1rem;
+        width: fit-content;
+        margin: auto auto;
+    }
+
+    .diduknow {
+        font-size: .7rem;
+    }
+
+    .oops {
+        width: 200px;
+        left: calc(50% - 100px);
+    }
+
+    .back {
+        top: 50%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .result .place-name {
+        font-size: 1.5rem;
+    }
+
+    .result .temp {
+        font-size: 2rem;
+    }
+
+    .back {
+        top: 45%;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .name {
+        width: 70%;
+    }
+
+    .oops {
+        width: 150px;
+        left: calc(50% - 75px);
+    }
+}
+
+@media screen and (max-width: 270px) {
+    input[type=text] {
+        font-size: 0.7rem;
+    }
+
+    .glass {
+        width: 15px;
+        left: calc(75% - 15px);
+        top: 12px;
+    }
+
+}
+
+
+
+.image {
+    grid-row: 1 / 4;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 15px;
+}
+
+.name {
+    grid-column: 2 / 4;
+    grid-row: 1 / span 1;
+    display: inline-flex;
+    flex-direction: column;
+    margin: 20px 40px;
+    width: fit-content;
+    height: fit-content;
+    flex-grow: 1;
+}
+
+.place-name {
+    display: inline;
+    vertical-align: 0.3rem;
+    font-size: 2rem;
+}
+
+.temp {
+    font-size: 3rem;
+}
+
+.des {
+    font-size: 1rem;
+}
+
+.name p {
+    margin-top: .7rem;
+    color: black;
+    text-shadow: 4px 4px 1px #aaa;
+}
+
+.wind {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 1;
+    box-shadow: 4px 4px 5px #000;
+    grid-column: 4 / 6;
+    grid-row: 1 / 2;
+    margin: 20px 20px;
+    background-image: url(wind-bg.jpeg);
+    background-size: cover;
+    border-radius: 15px 15px;
+}
+
+.humidity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+    margin: 20px 20px;
+    border-radius: 15px 15px;
+    border: 1px #333 solid;
+    box-shadow: 4px 4px 5px #333;
+    background-color: linear-gradient(rgb(240, 223, 226), rgb(198, 222, 231));
+}
+
+.clouds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    margin: 20px 20px;
+    border-radius: 15px 15px;
+    border: 1px #333 solid;
+    box-shadow: 4px 4px 5px #333;
+    background-color: var(--back);
+}
+
+.pressure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    margin: 20px 20px;
+    border-radius: 15px 15px;
+    border: 1px #333 solid;
+    box-shadow: 4px 4px 5px #333;
+    background-color: var(--back);
+}
+
+.visib {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    margin: 20px 20px;
+    border-radius: 15px 15px;
+    border: 1px #333 solid;
+    background-color: var(--back);
+    box-shadow: 4px 4px 5px #333;
+    /*animation: grids1 3s ease-in-out forwards;*/
+}
+
+.wind h1 {
+    color: white;
+    font-size: 1.5rem;
+    width: fit-content;
+    margin: 10px auto;
+}
+
+.wind_details {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.wind_details p {
+    font-size: 1rem;
+    border: 1px solid black;
+    background-color: white;
+    color: #333;
+    border-radius: 20px;
+    padding: 3px;
+}
+
+.spotify {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    width: 100%;
+    height: 100%;
+}
+
+.spotify img {
+    width: 50%;
+    height: 50%;
+    transform: translate(50%, 50%);
+    border-radius: 50%;
+    filter: brightness(100%);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    animation: shadow 1s ease 1s infinite alternate-reverse;
+    cursor: pointer;
+}
+
+.spotify_text {
+    grid-row: 3 / 4;
+    grid-column: 3 / 6;
+    width: fit-content;
+    margin: auto auto;
+    text-shadow: 4px 4px 1px #aaa;
+}
+
+h2 {
+    font-size: 1em;
+    width: fit-content;
+    margin: 15px auto;
+    padding: 4px;
+    border: 2px solid #000;
+    border-radius: 20px;
+    background-color: #bbb;
+    box-shadow: 1px 1px 1px #000;
+
+}
+
+.pressure p,
+.clouds p,
+.humidity p,
+.visib p {
+    margin-bottom: 10px;
+    font-size: 1.25em;
+    text-shadow: 2px 2px .5px #aaa;
+}
+
+@media screen and (min-width: 720px) and (max-width: 1160px) {
+
+    .pressure p,
+    .clouds p,
+    .humidity p,
+    .visib p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 0.8em;
+    }
+}
+
+
+.visib:hover,
+.humidity:hover,
+.clouds:hover,
+.pressure:hover {
+    transform: translateY(-2px);
+}
+
+.spotify_embed {
+    grid-column: 2 / 6;
+    grid-row: 3 / 4;
+    padding-right: 20px;
+    vertical-align: 30px;
+}
+
+.diduknow {
+    width: 70%;
+    margin: 50px auto;
+    line-height: 1.5;
+    z-index: 1;
+    color: #000;
+}

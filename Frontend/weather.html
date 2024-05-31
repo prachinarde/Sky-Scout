@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="weather.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="icon" href="icons/flaticon.jpg">
+    <title>SkyScout</title>
+</head>
+
+<body>
+    <div id="transparent">
+        <input class="search-bar" type="text" placeholder="Search" onkeydown="press(event)">
+        <img onclick="getPlace()" src="icons/search-interface-symbol.png" alt="search" class="glass" loading="eager"
+            width="35px">
+        <p class="diduknow"></p>
+    </div>
+    <div class="result">
+        <!--
+        <img class="oops" src="oops.jpeg" alt="error_image" width=400px>
+        <button class="back" onclick="toptob()">Go Back</button>-->
+        <div class="image">
+            <img class="left-img" src="left_corner/sunny.jpg" alt="sky">
+        </div>
+        <div class="name">
+            <img src="icons/location.png" alt="pin" width="30px" height="auto">
+            <p class="place-name"></p>
+            <p class="temp"></p>
+            <p class="feels-like"></p>
+            <p class="des"></p>
+        </div>
+        <div class="wind">
+            <h1>Wind</h1>
+            <div class="wind_details">
+                <p class="speed"></p>
+                <p class="deg"></p>
+                <p class="gust"></p>
+            </div>
+        </div>
+        <div class="visib">
+            <h2>Visibility</h2>
+            <img src="icons/witness.png" alt="visibility" width="40px">
+            <p></p>
+        </div>
+        <div class="pressure">
+            <h2>Air Pressure</h2>
+            <img src="icons/air.png" alt="air_pressure" width="50px">
+            <p></p>
+        </div>
+        <div class="clouds">
+            <h2>Clouds</h2>
+            <img src="icons/cloud.png" alt="cloud" width="50px">
+            <p></p>
+        </div>
+        <div class="humidity">
+            <h2>Humidity</h2>
+            <img src="icons/humidity.png" alt="humidity" width="50px">
+            <p></p>
+        </div>
+        <div class="spotify">
+            <a class="playlist" href="" target="_blank"><img src="spotify.jpeg" alt="spotify" width="50px"></a>
+        </div>
+        <p class="spotify_text">Here's a Spotify Playlist to lighten up Your Mood!</p>
+        <!--<iframe class="spotify_embed" style="border-radius:12px"
+            src="https://open.spotify.com/embed/playlist/7bGMboeZhN1bj0CHuuIVTH?utm_source=generator&theme=0"
+            width="100%" height="142" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>-->
+    </div>
+    <script src="weather.js"></script>
+</body>
+
+
+</html>
+
+<!--<div class="result">
+        <div class="image">
+            <img src="sunny.jpg" alt="sky">
+        </div>
+        <div class="name">
+            <img src="location.png" alt="pin" width="30px" height="auto">
+            <p class="place-name">Delhi</p>
+            <p class="temp">24.05&deg;C</p>
+            <p class="feels-like">Feels like 34.05&deg;C</p>
+            <p class="des">Clear Sky</p>
+        </div>
+        <div class="wind">
+            <h1>Wind</h1>
+            <div class="wind_details">
+                <p>Speed: &nbsp;2kmph</p>
+                <p>Deg: 280</p>
+                <p>Gust: 11.54</p>
+            </div>
+        </div>
+        <div class="visib">
+            <h2>Visibility</h2>
+            <img src="icons/witness.png" alt="visibility" width="40px">
+            <p>11 km</p>
+        </div>
+        <div class="pressure">
+            <h2>Air Pressure</h2>
+            <img src="icons/air.png" alt="air_pressure" width="50px">
+            <p>1003 kPa</p>
+        </div>
+        <div class="clouds">
+            <h2>Clouds</h2>
+            <img src="icons/cloud.png" alt="cloud" width="50px">
+            <p>75</p>
+        </div>
+        <div class="humidity">
+            <h2>Humidity</h2>
+            <img src="icons/humidity.png" alt="humidity" width="50px">
+            <p>85%</p>
+        </div>
+        <div class="spotify">
+            <img src="spotify.jpeg" alt="spotify" width="50px">
+        </div>
+        <p class="spotify_text">Here's a Spotify Playlist to lighten up Your Mood!</p>-->
